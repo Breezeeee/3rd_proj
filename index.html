@@ -1,11 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
     <title>Front-end</title>
 </head>
-<body>
-    <h1>Hello world!</h1>
+<body ng-app="myApp">
+    <h1>My AngularJS App</h1>
+    <div ng-controller="myController">
+        <div>
+            Input:
+            <input type="text"
+                   ng-model="name"
+                   ng-keyup="displayNumeric();">
+        </div>
+        <div><br>Total value: {{totalValue}}</div>
+        <br>{{name}}
+    </div>
 </body>
 </html>
