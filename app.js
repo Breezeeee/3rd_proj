@@ -4,27 +4,45 @@
     angular.module('myApp',[])
 
         .controller('myController',function($scope){
-            $scope.name = "";
-            $scope.totalValue = 0;
-            $scope.stateOfA = "1";
-            $scope.displayNumeric = function(){
-                var val = calculate($scope.name);
-                $scope.totalValue = val;
-            };
-            $scope.change1 = function(){
-                $scope.stateOfA = "233";
-            };
-            $scope.change2 = function(){
-                $scope.stateOfA = "1";
+            $scope.binary_num = "";
+            $scope.decimal_num = "";
+            $scope.stateOfCal = "right";
+
+            $scope.displayDecimalNum = function(){
+                var val = calculate($scope.binary_num);
+                $scope.decimal_num = val;
             };
 
-            function calculate(string){
-                var val = 0;
-                for (var i = 0; i < string.length; i++){
-                    val += string.charCodeAt(i);
+
+            function calculate(Num){
+                var num_valid = judge_valid(Num);
+                if(!num_valid){
+                    $scope.stateOfCal = "wrong";
+                    return "Invalid input!";
                 }
 
+                $scope.stateOfCal = "right";
+                var val = 0;
+                for(var i = 0; i < Num.length; i++){
+                    var char_at_i = Num.charCodeAt(i) - 48;
+                    for(var j = 1; j < Num.length - i; j++){
+                        char_at_i *= 2;
+                    }
+                    val += char_at_i;
+                }
                 return val;
+            }
+
+            function judge_valid(Num){
+                var num_valid = 1;
+                for(var i = 0; i < Num.length; i++){
+                    var char_at_i = Num.charCodeAt(i) - 48;
+                    if(char_at_i > 1 | char_at_i < 0){
+                        num_valid = 0;
+                        break;
+                    }
+                }
+                return num_valid;
             }
 
         });
