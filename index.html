@@ -4,19 +4,30 @@
     <meta charset="UTF-8">
     <script src="angular.min.js"></script>
     <script src="app.js"></script>
-    <title>Front-end</title>
+    <title>Binary-Decimal Conversion</title>
 </head>
 <body ng-app="myApp">
     <h1>My AngularJS App</h1>
     <div ng-controller="myController">
-        <div>
+        <h2>
             Input:
             <input type="text"
                    ng-model="name"
-                   ng-keyup="displayNumeric();">
+                   ng-keyup="displayNumeric()">
+        </h2>
+        <div>
+            <br>
+            Total value: {{totalValue}}
+            <br><br>
+            {{name}}
+            <br><br>
         </div>
-        <div><br>Total value: {{totalValue}}</div>
-        <br>{{name}}
+        <div>
+            <button ng-click="change1()">1</button>
+            <button ng-click="change2()">2</button>
+            <br>
+            <img ng-src="{{stateOfA}}.png">
+        </div>
     </div>
 </body>
 </html>

@@ -6,9 +6,16 @@
         .controller('myController',function($scope){
             $scope.name = "";
             $scope.totalValue = 0;
+            $scope.stateOfA = "1";
             $scope.displayNumeric = function(){
                 var val = calculate($scope.name);
                 $scope.totalValue = val;
+            };
+            $scope.change1 = function(){
+                $scope.stateOfA = "233";
+            };
+            $scope.change2 = function(){
+                $scope.stateOfA = "1";
             };
 
             function calculate(string){
