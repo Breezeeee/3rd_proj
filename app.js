@@ -5,7 +5,7 @@
 
         .controller('myController',function($scope){
             $scope.binary_num = "";
-            $scope.decimal_num = "";
+            $scope.decimal_num = "Decimal Number: ";
             $scope.stateOfCal = "right";
 
             $scope.displayDecimalNum = function(){
@@ -18,7 +18,7 @@
                 var num_valid = judge_valid(Num);
                 if(!num_valid){
                     $scope.stateOfCal = "wrong";
-                    return "Invalid input!";
+                    return "Rua! you entered invalid number!";
                 }
 
                 $scope.stateOfCal = "right";
@@ -30,6 +30,7 @@
                     }
                     val += char_at_i;
                 }
+                val = "Decimal Number: " + val;
                 return val;
             }
 

@@ -1,0 +1,18 @@
+p {
+    color: #39C5BB;
+    font-size: 20px;
+    text-align: center;
+}
+
+h1{
+    color: #B7A5DF;
+    font-size: 36px;
+    text-align: center;
+}
+body {
+    font: 75% georgia, sans-serif;
+    line-height: 1.88889;
+    color: #555753;
+    margin: 0;
+    padding: 0;
+}

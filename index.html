@@ -2,24 +2,25 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <title>Binary to Decimal</title>
+    <link rel="stylesheet" media="screen" href="style.css">
     <script src="angular.min.js"></script>
     <script src="app.js"></script>
-    <title>Binary to Decimal</title>
 </head>
 <body ng-app="myApp">
     <h1>My Binary to Decimal Conversion App</h1>
     <div ng-controller="myController">
         <br>
-        <h3>
+        <p>
             Binary Number:
             <input type="text"
                    ng-model="binary_num"
                    ng-keyup="displayDecimalNum()">
             <br><br>
-            Decimal Number: {{decimal_num}}
-            <br>
+            {{decimal_num}}
+            <br><br>
             <img ng-src="{{stateOfCal}}.png">
-        </h3>
+        </p>
     </div>
 </body>
 </html>
