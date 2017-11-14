@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Binary to Decimal</title>
-    <link rel="stylesheet" media="screen" href="style.css">
+    <link rel="stylesheet" media="screen" href="mystyle.css">
     <script src="angular.min.js"></script>
     <script src="app.js"></script>
 </head>
@@ -16,11 +16,13 @@
             <input type="text"
                    ng-model="binary_num"
                    ng-keyup="displayDecimalNum()">
-            <br><br>
-            {{decimal_num}}
-            <br><br>
-            <img ng-src="{{stateOfCal}}.png">
+            <br>
         </p>
+        <h2>
+            {{decimal_num}}
+            <br>
+            <img ng-src="{{stateOfCal}}.jpg">
+        </h2>
     </div>
 </body>
 </html>
