@@ -10,7 +10,7 @@ h1{
     font-size: 48px;
     font-style: italic;
     font-weight: 400;
-    background: #fff url(title.jpg) no-repeat center;
+    background: #fff url(pictures/title.jpg) no-repeat center;
     opacity: .8;
     text-align: center;
 }
@@ -25,7 +25,7 @@ body {
     font: 75% georgia, sans-serif;
     line-height: 1.88889;
     color: #555753;
-    background: #fff url(background.webp) no-repeat center;
+    background: #fff url(pictures/background.webp) no-repeat center;
     margin: 0;
     padding: 0;
 }

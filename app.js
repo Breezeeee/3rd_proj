@@ -13,7 +13,6 @@
                 $scope.decimal_num = val;
             };
 
-
             function calculate(Num){
                 var num_valid = judge_valid(Num);
                 if(!num_valid){
@@ -22,6 +21,10 @@
                 }
 
                 $scope.stateOfCal = "right";
+                return bin2dec(Num);
+            }
+
+            function bin2dec(Num){
                 var val = 0;
                 for(var i = 0; i < Num.length; i++){
                     var char_at_i = Num.charCodeAt(i) - 48;
